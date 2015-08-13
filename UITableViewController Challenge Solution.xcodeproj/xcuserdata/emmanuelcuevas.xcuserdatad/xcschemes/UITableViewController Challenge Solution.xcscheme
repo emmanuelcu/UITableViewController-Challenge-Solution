@@ -5,6 +5,36 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2A2B29501B71BF4100C7547C"
+               BuildableName = "UITableViewController Challenge Solution.app"
+               BlueprintName = "UITableViewController Challenge Solution"
+               ReferencedContainer = "container:UITableViewController Challenge Solution.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2A2B296C1B71BF4100C7547C"
+               BuildableName = "UITableViewController Challenge SolutionTests.xctest"
+               BlueprintName = "UITableViewController Challenge SolutionTests"
+               ReferencedContainer = "container:UITableViewController Challenge Solution.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -12,7 +42,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2A2B296C1B71BF4100C7547C"
+               BuildableName = "UITableViewController Challenge SolutionTests.xctest"
+               BlueprintName = "UITableViewController Challenge SolutionTests"
+               ReferencedContainer = "container:UITableViewController Challenge Solution.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2A2B29501B71BF4100C7547C"
+            BuildableName = "UITableViewController Challenge Solution.app"
+            BlueprintName = "UITableViewController Challenge Solution"
+            ReferencedContainer = "container:UITableViewController Challenge Solution.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -23,6 +72,16 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2A2B29501B71BF4100C7547C"
+            BuildableName = "UITableViewController Challenge Solution.app"
+            BlueprintName = "UITableViewController Challenge Solution"
+            ReferencedContainer = "container:UITableViewController Challenge Solution.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -32,6 +91,16 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2A2B29501B71BF4100C7547C"
+            BuildableName = "UITableViewController Challenge Solution.app"
+            BlueprintName = "UITableViewController Challenge Solution"
+            ReferencedContainer = "container:UITableViewController Challenge Solution.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
