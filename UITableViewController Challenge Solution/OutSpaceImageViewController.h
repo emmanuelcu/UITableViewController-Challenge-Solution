@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OutSpaceObject.h"
 
-@interface OutSpaceImageViewController : UIViewController
+@interface OutSpaceImageViewController : UIViewController  <UIScrollViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UIImageView *image;
+@property (strong, nonatomic) OutSpaceObject *spaceObject;
 
 @end
