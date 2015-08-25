@@ -46,6 +46,9 @@
                         <barButtonItem key="backBarButtonItem" title="Planets" id="mNR-Dk-kku"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="rNt-ku-6VK" kind="push" identifier="push to planets info" id="G0F-ch-2A3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cho-Li-nf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,6 +101,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qPV-HV-0jw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="5jz-Yu-j0j" id="rbL-hl-aNZ"/>

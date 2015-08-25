@@ -10,6 +10,7 @@
 #import "astronomicalData.h"
 #import "OutSpaceObject.h"
 #import "OutSpaceImageViewController.h"
+#import "SpaceDataViewController.h"
 
 
 
@@ -62,6 +63,14 @@
             OutSpaceObject *selectedObject = [self.planetInformation objectAtIndex:path.row];
             nextViewController.spaceObject = selectedObject;
             
+        }
+    }
+    if ([sender isKindOfClass: [NSIndexPath class]]) {
+        if ([segue.destinationViewController isKindOfClass:[SpaceDataViewController class]]) {
+            SpaceDataViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            SpaceDataViewController *selectedObject = self.planetInformation[path.row];
+            targetViewController.spaceObject = selectedObject;
         }
     }
 }
@@ -133,7 +142,7 @@
 #pragma mark UITableViewDelegate
 
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"accesory button is working properly %i", indexPath.row);
+    [self performSegueWithIdentifier:@"push to planets info" sender:indexPath];
 }
 
 @end
