@@ -105,6 +105,10 @@
     cell.detailTextLabel.text = planet.nameInSpanish;
     cell.imageView.image = planet.spaceImage;
     
+    cell.backgroundColor = [UIColor blackColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    
     /*
     
   
@@ -126,5 +130,10 @@
 
 }
 
+#pragma mark UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"accesory button is working properly %i", indexPath.row);
+}
 
 @end

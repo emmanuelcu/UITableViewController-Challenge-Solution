@@ -28,6 +28,7 @@
 		2A2B29961B7D8A7900C7547C /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A2B298C1B7D8A7900C7547C /* Venus.jpg */; };
 		2A2B299A1B7D95C300C7547C /* OutSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B29991B7D95C300C7547C /* OutSpaceObject.m */; };
 		2A2B299D1B8057B900C7547C /* OutSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B299C1B8057B900C7547C /* OutSpaceImageViewController.m */; };
+		2A2B29A01B88BD4F00C7547C /* SpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B299F1B88BD4F00C7547C /* SpaceDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		2A2B29991B7D95C300C7547C /* OutSpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OutSpaceObject.m; path = ../OutSpaceObject.m; sourceTree = "<group>"; };
 		2A2B299B1B8057B900C7547C /* OutSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutSpaceImageViewController.h; sourceTree = "<group>"; };
 		2A2B299C1B8057B900C7547C /* OutSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutSpaceImageViewController.m; sourceTree = "<group>"; };
+		2A2B299E1B88BD4F00C7547C /* SpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceDataViewController.h; sourceTree = "<group>"; };
+		2A2B299F1B88BD4F00C7547C /* SpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				2A2B29581B71BF4100C7547C /* AppDelegate.h */,
 				2A2B29591B71BF4100C7547C /* AppDelegate.m */,
 				2A2B29611B71BF4100C7547C /* Main.storyboard */,
+				2A2B299E1B88BD4F00C7547C /* SpaceDataViewController.h */,
+				2A2B299F1B88BD4F00C7547C /* SpaceDataViewController.m */,
 				2A2B297D1B71BFAA00C7547C /* TableViewController.h */,
 				2A2B297E1B71BFAA00C7547C /* TableViewController.m */,
 				2A2B299B1B8057B900C7547C /* OutSpaceImageViewController.h */,
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2B29821B7D8A5B00C7547C /* astronomicalData.m in Sources */,
+				2A2B29A01B88BD4F00C7547C /* SpaceDataViewController.m in Sources */,
 				2A2B295A1B71BF4100C7547C /* AppDelegate.m in Sources */,
 				2A2B29571B71BF4100C7547C /* main.m in Sources */,
 				2A2B295D1B71BF4100C7547C /* UITableViewController_Challenge_Solution.xcdatamodeld in Sources */,
