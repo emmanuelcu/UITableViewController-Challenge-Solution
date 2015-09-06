@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hN8-rQ-wAQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hN8-rQ-wAQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -8,10 +8,10 @@
         <scene sceneID="bFd-Xc-dWJ">
             <objects>
                 <tableViewController id="yWw-TL-p42" customClass="TableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ufP-hn-oOf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ufP-hn-oOf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="aBG-X1-85h" detailTextLabel="o0Y-iD-hXK" style="IBUITableViewCellStyleSubtitle" id="gmd-y3-aqk">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -44,6 +44,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Planets" id="BVs-AM-v3c">
                         <barButtonItem key="backBarButtonItem" title="Planets" id="mNR-Dk-kku"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="skL-lJ-uW3">
+                            <connections>
+                                <segue destination="ChS-p1-0xK" kind="modal" id="Nxl-Kt-Y5u"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -52,7 +57,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cho-Li-nf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858.5" y="330.5"/>
+            <point key="canvasLocation" x="956.5" y="524.5"/>
         </scene>
         <!--Space Data View Controller-->
         <scene sceneID="hsV-zg-6xD">
@@ -109,7 +114,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sp-v2-kzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1411.5" y="684.5"/>
+            <point key="canvasLocation" x="1535.5" y="114.5"/>
+        </scene>
+        <!--Add Space Object View Controller-->
+        <scene sceneID="RaZ-4R-9xy">
+            <objects>
+                <viewController id="ChS-p1-0xK" customClass="AddSpaceObjectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2JV-cW-KpR"/>
+                        <viewControllerLayoutGuide type="bottom" id="LpJ-JM-QDt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hOc-4F-DTx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8Y-3N-JB5">
+                                <rect key="frame" x="37" y="60" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gravity" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTg-T2-Gx7">
+                                <rect key="frame" x="37" y="110" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diameter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cAY-Nt-Sdm">
+                                <rect key="frame" x="37" y="160" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year Length" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-vX-AGm">
+                                <rect key="frame" x="37" y="210" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Day Length" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GpO-xU-Vge">
+                                <rect key="frame" x="37" y="260" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Temperature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4E-oG-udi">
+                                <rect key="frame" x="37" y="310" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of moons" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-uy-w5J">
+                                <rect key="frame" x="37" y="360" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name in spanish" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wqz-Fw-rnb">
+                                <rect key="frame" x="37" y="410" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-ja-jhX">
+                                <rect key="frame" x="211" y="500" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.42352941179999998" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="ChS-p1-0xK" eventType="touchUpInside" id="63s-ok-fPW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vww-8L-4or">
+                                <rect key="frame" x="64" y="500" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.058663802841824979" green="0.66161616161616155" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="ChS-p1-0xK" eventType="touchUpInside" id="dQE-p8-WtN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dayLengthTextfield" destination="GpO-xU-Vge" id="siI-pZ-Xq1"/>
+                        <outlet property="diameterTextfield" destination="cAY-Nt-Sdm" id="zsC-VR-HEX"/>
+                        <outlet property="gravityTextfield" destination="XTg-T2-Gx7" id="s8s-9U-zEk"/>
+                        <outlet property="nameSpanishTextfield" destination="Wqz-Fw-rnb" id="LUT-lW-qDx"/>
+                        <outlet property="nameTextfield" destination="e8Y-3N-JB5" id="0F2-VL-F4h"/>
+                        <outlet property="numberMoonsTextfield" destination="Hgt-uy-w5J" id="LBN-gc-Ma6"/>
+                        <outlet property="temperatureTextfield" destination="Q4E-oG-udi" id="oNw-7Y-E2f"/>
+                        <outlet property="yearLengthTextfield" destination="9lK-vX-AGm" id="KzI-tW-U9a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMy-mm-x7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505" y="995"/>
         </scene>
         <!--Out Space Image View Controller-->
         <scene sceneID="8rQ-Vf-ctZ">
@@ -139,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K08-of-nj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1411.5" y="-91.5"/>
+            <point key="canvasLocation" x="1535.5" y="-661.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eVP-ZX-wmM">

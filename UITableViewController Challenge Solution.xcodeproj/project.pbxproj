@@ -29,6 +29,8 @@
 		2A2B299A1B7D95C300C7547C /* OutSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B29991B7D95C300C7547C /* OutSpaceObject.m */; };
 		2A2B299D1B8057B900C7547C /* OutSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B299C1B8057B900C7547C /* OutSpaceImageViewController.m */; };
 		2A2B29A01B88BD4F00C7547C /* SpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B299F1B88BD4F00C7547C /* SpaceDataViewController.m */; };
+		2AACE4C61B9BF75800A39013 /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AACE4C51B9BF75800A39013 /* space.png */; };
+		2AACE4C91B9BF7AE00A39013 /* AddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AACE4C81B9BF7AE00A39013 /* AddSpaceObjectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,9 @@
 		2A2B299C1B8057B900C7547C /* OutSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutSpaceImageViewController.m; sourceTree = "<group>"; };
 		2A2B299E1B88BD4F00C7547C /* SpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceDataViewController.h; sourceTree = "<group>"; };
 		2A2B299F1B88BD4F00C7547C /* SpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceDataViewController.m; sourceTree = "<group>"; };
+		2AACE4C51B9BF75800A39013 /* space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space.png; sourceTree = "<group>"; };
+		2AACE4C71B9BF7AE00A39013 /* AddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		2AACE4C81B9BF7AE00A39013 /* AddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSpaceObjectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,8 @@
 				2A2B29581B71BF4100C7547C /* AppDelegate.h */,
 				2A2B29591B71BF4100C7547C /* AppDelegate.m */,
 				2A2B29611B71BF4100C7547C /* Main.storyboard */,
+				2AACE4C71B9BF7AE00A39013 /* AddSpaceObjectViewController.h */,
+				2AACE4C81B9BF7AE00A39013 /* AddSpaceObjectViewController.m */,
 				2A2B299E1B88BD4F00C7547C /* SpaceDataViewController.h */,
 				2A2B299F1B88BD4F00C7547C /* SpaceDataViewController.m */,
 				2A2B297D1B71BFAA00C7547C /* TableViewController.h */,
@@ -166,6 +173,7 @@
 		2A2B29971B7D8AC800C7547C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2AACE4C51B9BF75800A39013 /* space.png */,
 				2A2B29831B7D8A7900C7547C /* Earth.jpg */,
 				2A2B29841B7D8A7900C7547C /* EinsteinRing.jpg */,
 				2A2B29851B7D8A7900C7547C /* Jupiter.jpg */,
@@ -266,6 +274,7 @@
 				2A2B29941B7D8A7900C7547C /* Saturn.jpg in Resources */,
 				2A2B29951B7D8A7900C7547C /* Uranus.jpg in Resources */,
 				2A2B29631B71BF4100C7547C /* Main.storyboard in Resources */,
+				2AACE4C61B9BF75800A39013 /* space.png in Resources */,
 				2A2B29921B7D8A7900C7547C /* Neptune.jpg in Resources */,
 				2A2B29901B7D8A7900C7547C /* Mars.jpg in Resources */,
 				2A2B29681B71BF4100C7547C /* LaunchScreen.xib in Resources */,
@@ -291,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2B29821B7D8A5B00C7547C /* astronomicalData.m in Sources */,
+				2AACE4C91B9BF7AE00A39013 /* AddSpaceObjectViewController.m in Sources */,
 				2A2B29A01B88BD4F00C7547C /* SpaceDataViewController.m in Sources */,
 				2A2B295A1B71BF4100C7547C /* AppDelegate.m in Sources */,
 				2A2B29571B71BF4100C7547C /* main.m in Sources */,
@@ -492,6 +502,7 @@
 				2A2B29791B71BF4100C7547C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A2B297A1B71BF4100C7547C /* Build configuration list for PBXNativeTarget "UITableViewController Challenge SolutionTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +511,7 @@
 				2A2B297C1B71BF4100C7547C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

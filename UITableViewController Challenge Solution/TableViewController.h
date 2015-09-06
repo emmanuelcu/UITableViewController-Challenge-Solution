@@ -11,5 +11,6 @@
 @interface TableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *planetInformation;
+@property (strong, nonatomic) NSMutableArray *addSpaceObjects;
 
 @end

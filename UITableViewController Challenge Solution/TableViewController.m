@@ -81,13 +81,29 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    //Here the code will count if some object has been added to the addSpace Object
 
-    return 1;
+    if ([self.addSpaceObjects count]) {
+        return 2;
+    }else{
+    
+        return 1;
+        
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return [self.planetInformation count];
+    //Here the code will review if one element has been added and will return the object
+    
+    if (section == 1) {
+        return [self.addSpaceObjects count];
+    }else {
+    
+        return [self.planetInformation count];
+        
+    }
 
    /* if (section == 0) {
         return 2;
@@ -107,17 +123,25 @@
     
     //Configure the cell name
     
+    
+    if (indexPath.section == 1) {
+        
+        //Here is the new code to add the objects
+        
+    }else {
+    
     //cell.textLabel.text = [self.planetInformation objectAtIndex:indexPath.row];
     
-    OutSpaceObject *planet = [self.planetInformation objectAtIndex:indexPath.row];
-    cell.textLabel.text = planet.name;
-    cell.detailTextLabel.text = planet.nameInSpanish;
-    cell.imageView.image = planet.spaceImage;
+            OutSpaceObject *planet = [self.planetInformation objectAtIndex:indexPath.row];
+            cell.textLabel.text = planet.name;
+            cell.detailTextLabel.text = planet.nameInSpanish;
+            cell.imageView.image = planet.spaceImage;
     
-    cell.backgroundColor = [UIColor blackColor];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
+            cell.backgroundColor = [UIColor blackColor];
+            cell.textLabel.textColor = [UIColor whiteColor];
+             cell.detailTextLabel.textColor = [UIColor whiteColor];
     
+    }
     /*
     
   
