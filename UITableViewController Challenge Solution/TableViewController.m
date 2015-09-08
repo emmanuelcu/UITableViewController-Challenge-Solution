@@ -73,6 +73,32 @@
             targetViewController.spaceObject = selectedObject;
         }
     }
+    
+    if ([segue.destinationViewController isKindOfClass: [AddSpaceObjectViewController class]]) {
+        AddSpaceObjectViewController *addSpaceObjectVC = segue.destinationViewController;
+        addSpaceObjectVC.delegate = self;
+    }
+}
+
+#pragma mark AddSpaceObjectViewController method
+
+
+-(void)addSpaceObject:(OutSpaceObject *)spaceObject{
+    
+    if (!self.addSpaceObjects) {
+        self.addSpaceObjects = [[NSMutableArray alloc] init];
+    }
+    [self.addSpaceObjects addObject:spaceObject];
+    
+    [self.tableView reloadData];
+    
+    NSLog(@"addSpaceObject");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)didCancel{
+    NSLog(@"didCancel");
+    [self dismissViewControllerAnimated:YES completion:nil];    
 }
 
 -(void)didReceiveMemoryWarning{
@@ -128,6 +154,14 @@
         
         //Here is the new code to add the objects
         
+        OutSpaceObject *planet = [self.addSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nameInSpanish;
+        
+        //color cell configuration
+        cell.backgroundColor = [UIColor blackColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.detailTextLabel.textColor = [UIColor whiteColor];
     }else {
     
     //cell.textLabel.text = [self.planetInformation objectAtIndex:indexPath.row];
@@ -137,6 +171,8 @@
             cell.detailTextLabel.text = planet.nameInSpanish;
             cell.imageView.image = planet.spaceImage;
     
+        
+        //color cell configuration
             cell.backgroundColor = [UIColor blackColor];
             cell.textLabel.textColor = [UIColor whiteColor];
              cell.detailTextLabel.textColor = [UIColor whiteColor];

@@ -11,7 +11,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ufP-hn-oOf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="aBG-X1-85h" detailTextLabel="o0Y-iD-hXK" style="IBUITableViewCellStyleSubtitle" id="gmd-y3-aqk">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -169,7 +169,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-ja-jhX">
-                                <rect key="frame" x="211" y="500" width="100" height="30"/>
+                                <rect key="frame" x="211" y="560" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.42352941179999998" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,7 +180,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vww-8L-4or">
-                                <rect key="frame" x="64" y="500" width="100" height="30"/>
+                                <rect key="frame" x="64" y="560" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.058663802841824979" green="0.66161616161616155" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,6 +190,11 @@
                                     <action selector="addButtonPressed:" destination="ChS-p1-0xK" eventType="touchUpInside" id="dQE-p8-WtN"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Interesting facts" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-s5-ny2">
+                                <rect key="frame" x="37" y="468" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -198,6 +203,7 @@
                         <outlet property="dayLengthTextfield" destination="GpO-xU-Vge" id="siI-pZ-Xq1"/>
                         <outlet property="diameterTextfield" destination="cAY-Nt-Sdm" id="zsC-VR-HEX"/>
                         <outlet property="gravityTextfield" destination="XTg-T2-Gx7" id="s8s-9U-zEk"/>
+                        <outlet property="interestingfactsTextfield" destination="ddc-s5-ny2" id="fQt-8C-srV"/>
                         <outlet property="nameSpanishTextfield" destination="Wqz-Fw-rnb" id="LUT-lW-qDx"/>
                         <outlet property="nameTextfield" destination="e8Y-3N-JB5" id="0F2-VL-F4h"/>
                         <outlet property="numberMoonsTextfield" destination="Hgt-uy-w5J" id="LBN-gc-Ma6"/>

@@ -7,8 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OutSpaceObject.h"
+
+
+
+@protocol AddSpaceObjectViewControllerDelegate <NSObject>
+
+@required
+
+-(void)addSpaceObject: (OutSpaceObject *)spaceObject;
+-(void)didCancel;
+
+@end
 
 @interface AddSpaceObjectViewController : UIViewController
+
+@property (weak, nonatomic) id <AddSpaceObjectViewControllerDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UITextField *nameTextfield;
 
@@ -25,6 +39,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *numberMoonsTextfield;
 
 @property (strong, nonatomic) IBOutlet UITextField *nameSpanishTextfield;
+
+@property (strong, nonatomic) IBOutlet UITextField *interestingfactsTextfield;
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender;
 
