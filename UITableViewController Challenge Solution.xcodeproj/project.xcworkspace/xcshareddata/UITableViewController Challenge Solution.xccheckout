@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0A8540B6-EE2B-414F-857A-DA0D39AE3535</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UITableViewController Challenge Solution</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2742CCD2E949C39A9DDFA330340BD36784718C40</key>
+		<string>https://github.com/emmanuelcu/UITableViewController-Challenge-Solution.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>UITableViewController Challenge Solution.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2742CCD2E949C39A9DDFA330340BD36784718C40</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/emmanuelcu/UITableViewController-Challenge-Solution.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2742CCD2E949C39A9DDFA330340BD36784718C40</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2742CCD2E949C39A9DDFA330340BD36784718C40</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UITableViewController%20Challenge%20Solution</string>
+		</dict>
+	</array>
+</dict>
+</plist>
