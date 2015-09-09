@@ -70,7 +70,7 @@
             SpaceDataViewController *targetViewController = segue.destinationViewController;
             NSIndexPath *path = sender;
             SpaceDataViewController *selectedObject = self.planetInformation[path.row];
-            targetViewController.spaceObject = selectedObject;
+            //targetViewController.spaceObject = selectedObject;
         }
     }
     
