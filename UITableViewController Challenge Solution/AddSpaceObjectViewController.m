@@ -56,6 +56,7 @@
     addedObject.numberOfMoons = [self.numberMoonsTextfield.text intValue];
     addedObject.nameInSpanish = self.nameSpanishTextfield.text;
     addedObject.interestingFacts = self.interestingfactsTextfield.text;
+    addedObject.spaceImage = [UIImage imageNamed:@"EinsteinRing.jpg"];
     
     return addedObject;
 }

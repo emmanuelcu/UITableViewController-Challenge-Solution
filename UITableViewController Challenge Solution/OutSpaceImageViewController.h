@@ -12,7 +12,7 @@
 @interface OutSpaceImageViewController : UIViewController  <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong, nonatomic) UIImageView *image;
+@property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) OutSpaceObject *spaceObject;
 
 @end

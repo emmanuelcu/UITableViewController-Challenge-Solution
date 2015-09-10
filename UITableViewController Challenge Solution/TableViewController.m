@@ -16,6 +16,22 @@
 
 @implementation TableViewController
 
+#pragma -mark Lazy instantiation for properties.
+
+-(NSMutableArray *)planetInformation{
+    if (!_planetInformation) {
+        _planetInformation = [[NSMutableArray alloc] init];
+    }
+    return _planetInformation;
+}
+
+-(NSMutableArray *)addSpaceObjects{
+    if (!_addSpaceObjects) {
+        _addSpaceObjects = [[NSMutableArray alloc]init];
+    }
+    return _addSpaceObjects;
+}
+
 -(void)viewDidLoad{
 
     [super viewDidLoad];
@@ -41,26 +57,31 @@
     */
     
     //Array for fill the array with objects.
-    self.planetInformation = [[NSMutableArray alloc] init];
+    //self.planetInformation = [[NSMutableArray alloc] init];
     
+    //for instance to show the planet image in a small version
     for (NSMutableDictionary *planetData in [astronomicalData planetsInSolarSystem]) {
         NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData [PLANET_NAME]];
         
         OutSpaceObject *planet = [[OutSpaceObject alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName]];
         [self.planetInformation addObject: planet];
     }
-    
-    
-    
-
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([sender isKindOfClass:[UITableView class]]) {
+    //the problem experimented here was caused by the UITableViewCell because if the cell is compared it will show the image to the SpaceImageViewController.
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
         if ([segue.destinationViewController isKindOfClass:[OutSpaceImageViewController class]]) {
             OutSpaceImageViewController *nextViewController = segue.destinationViewController;
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
-            OutSpaceObject *selectedObject = [self.planetInformation objectAtIndex:path.row];
+            OutSpaceObject *selectedObject; //= [self.planetInformation objectAtIndex:path.row];
+            
+            if (path.section == 0) {
+                selectedObject = self.planetInformation[path.row];
+            }else if (path.section ==1){
+                selectedObject = self.addSpaceObjects[path.row];
+            }
+            
             nextViewController.spaceObject = selectedObject;
             
         }
@@ -69,8 +90,15 @@
         if ([segue.destinationViewController isKindOfClass:[SpaceDataViewController class]]) {
             SpaceDataViewController *targetViewController = segue.destinationViewController;
             NSIndexPath *path = sender;
-            SpaceDataViewController *selectedObject = self.planetInformation[path.row];
-            //targetViewController.spaceObject = selectedObject;
+            SpaceDataViewController *selectedObject;// = self.planetInformation[path.row];
+            if (path.section == 0) {
+                selectedObject = self.planetInformation[path.row];
+            }else if (path.section ==1){
+                selectedObject = self.addSpaceObjects[path.row];
+            }
+            targetViewController.spaceObject = selectedObject;
+            
+            //this part of the code makes that all the objects information are shown in the i button. 
         }
     }
     
@@ -85,9 +113,10 @@
 
 -(void)addSpaceObject:(OutSpaceObject *)spaceObject{
     
-    if (!self.addSpaceObjects) {
+  /*  if (!self.addSpaceObjects) {
         self.addSpaceObjects = [[NSMutableArray alloc] init];
-    }
+    }*/
+    
     [self.addSpaceObjects addObject:spaceObject];
     
     [self.tableView reloadData];
@@ -157,6 +186,7 @@
         OutSpaceObject *planet = [self.addSpaceObjects objectAtIndex:indexPath.row];
         cell.textLabel.text = planet.name;
         cell.detailTextLabel.text = planet.nameInSpanish;
+        cell.imageView.image = [UIImage imageNamed:@"EinsteinRing.jpg"];
         
         //color cell configuration
         cell.backgroundColor = [UIColor blackColor];
@@ -175,7 +205,7 @@
         //color cell configuration
             cell.backgroundColor = [UIColor blackColor];
             cell.textLabel.textColor = [UIColor whiteColor];
-             cell.detailTextLabel.textColor = [UIColor whiteColor];
+            cell.detailTextLabel.textColor = [UIColor whiteColor];
     
     }
     /*
