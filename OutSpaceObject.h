@@ -10,7 +10,7 @@
 @import UIKit;
 
 
-@interface OutSpaceObject : NSObject
+@interface OutSpaceObject : NSObject 
 
 @property (strong, nonatomic) NSString *name;
 @property (nonatomic) float gravitationalForce;

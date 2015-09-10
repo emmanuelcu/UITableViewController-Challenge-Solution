@@ -13,8 +13,11 @@
 #import "SpaceDataViewController.h"
 
 
+@interface TableViewController ()
 
+@end
 @implementation TableViewController
+#define ADDED_SPACE_OBJECTS_KEY @"Added Space Objects Array"
 
 #pragma -mark Lazy instantiation for properties.
 
@@ -66,6 +69,19 @@
         OutSpaceObject *planet = [[OutSpaceObject alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName]];
         [self.planetInformation addObject: planet];
     }
+    
+    
+    NSArray *myPlanetsAsPropertyLists = [[NSUserDefaults standardUserDefaults] arrayForKey:ADDED_SPACE_OBJECTS_KEY];
+    
+    for (NSDictionary *dictionary in myPlanetsAsPropertyLists){
+        
+            OutSpaceObject *spaceObject = [self spaceObjectForDictionary: dictionary];
+            [self.addSpaceObjects addObject:spaceObject];
+        
+        
+        
+            }
+
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -119,6 +135,23 @@
     
     [self.addSpaceObjects addObject:spaceObject];
     
+    //Will save to NSUserDefaults here
+    
+    
+    NSMutableArray *spaceObjectsAsPropertyLists = [[[NSUserDefaults standardUserDefaults] arrayForKey:ADDED_SPACE_OBJECTS_KEY] mutableCopy];
+    
+    if (!spaceObjectsAsPropertyLists) {
+        spaceObjectsAsPropertyLists = [[NSMutableArray alloc] init];
+    }
+    
+    [spaceObjectsAsPropertyLists addObject:[self spaceObjectsAsAPropertyList:spaceObject]];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:spaceObjectsAsPropertyLists forKey:ADDED_SPACE_OBJECTS_KEY];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
     [self.tableView reloadData];
     
     NSLog(@"addSpaceObject");
@@ -134,6 +167,29 @@
 
     [super didReceiveMemoryWarning];
 }
+
+#pragma mark - Helper Methods
+
+-(NSDictionary *)spaceObjectsAsAPropertyList:(OutSpaceObject *)spaceObject{
+
+    NSData *imageData = UIImagePNGRepresentation(spaceObject.spaceImage);
+    NSDictionary *dictionary = @{PLANET_NAME : spaceObject.name, PLANET_GRAVITY : @(spaceObject.gravitationalForce), PLANET_DIAMETER : @(spaceObject.diameter), PLANET_YEAR_LENGTH : @(spaceObject.yearLength), PLANET_DAY_LENGTH : @(spaceObject.dayLength), PLANET_TEMPERATURE : @(spaceObject.temperature), PLANET_NUMBER_OF_MOONS : @(spaceObject.numberOfMoons), PLANET_NAME_IN_SPANISH : spaceObject.nameInSpanish, PLANET_INTERESTING_FACT : spaceObject.interestingFacts, PLANET_IMAGE : imageData};
+    
+    return dictionary;
+    
+}
+
+-(OutSpaceObject *)spaceObjectForDictionary: (NSDictionary *)dictionary{
+    
+    NSData *dataForImage = dictionary [PLANET_IMAGE];
+    UIImage *spaceObjectImage = [UIImage imageWithData:dataForImage];
+    OutSpaceObject *spaceObject = [[OutSpaceObject alloc] initWithData:dictionary andImage: spaceObjectImage];
+    
+    return spaceObject;
+
+}
+
+#pragma mark - Table Properties
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     

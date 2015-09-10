@@ -17,6 +17,7 @@
 #define PLANET_NUMBER_OF_MOONS @"planet_number_of_moons"
 #define PLANET_NAME_IN_SPANISH @"planet_name_in_spanish"
 #define PLANET_INTERESTING_FACT @"planet_interesting_fact"
+#define PLANET_IMAGE @"planet_image"
 
 @interface astronomicalData : UIViewController
 
