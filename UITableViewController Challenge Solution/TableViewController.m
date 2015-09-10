@@ -291,4 +291,41 @@
     [self performSegueWithIdentifier:@"push to planets info" sender:indexPath];
 }
 
+#pragma mark Method for Delete
+
+//Override to support conditional editing of the table view.
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 1) return YES;
+    else return NO;
+    //Return NO if you do not want  the specified item to be editable
+
+}
+
+//Override to support editing the table view
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        //Delete the row from the data source
+        [self.addSpaceObjects removeObjectAtIndex: indexPath.row];
+        
+        NSMutableArray *newSavedSpaceObjectData = [[NSMutableArray alloc] init];
+        
+        for (OutSpaceObject *spaceObject in self.addSpaceObjects) {
+            [newSavedSpaceObjectData addObject:[self spaceObjectsAsAPropertyList:spaceObject]];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:newSavedSpaceObjectData forKey:ADDED_SPACE_OBJECTS_KEY ];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+    }else if (editingStyle == UITableViewCellEditingStyleInsert){
+        //Create a new instance of he appropiate class, inser it into the array, and a new row to the table view.
+    }
+}
+
 @end
